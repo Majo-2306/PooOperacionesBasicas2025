@@ -6,5 +6,20 @@ namespace PooOperacionesBasicas2025
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OperacionesBasicas op = new OperacionesBasicas();
+
+            Suma suma = new Suma();
+            Resta resta = new Resta();
+
+            Calcular(resta);
+        }
+
+        void Calcular(OperacionesBasicas operacionesBasicas)
+        {
+
+        }
     }
 }
