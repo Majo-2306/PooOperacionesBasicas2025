@@ -9,17 +9,22 @@ namespace PooOperacionesBasicas2025
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OperacionesBasicas op = new OperacionesBasicas();
 
             Suma suma = new Suma();
-            Resta resta = new Resta();
+            suma.Valor1 = 10;
+            suma.Valor2 = 20;
+            Calcular(suma);
 
+            Resta resta = new Resta();
+            resta.Valor1 = 10;
+            resta.Valor2 = 20;
             Calcular(resta);
+
         }
 
         void Calcular(OperacionesBasicas operacionesBasicas)
         {
-
+         MessageBox.Show(operacionesBasicas.Calcular().ToString());
         }
     }
 }
