@@ -7,24 +7,43 @@ namespace PooOperacionesBasicas2025
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        void Calcular(OperacionesBasicas operacionesBasicas)
         {
+            MessageBox.Show(operacionesBasicas.Calcular().ToString());
+        }
 
+        private void BtnSuma_Click(object sender, EventArgs e)
+        {
             Suma suma = new Suma();
-            suma.Valor1 = 10;
-            suma.Valor2 = 20;
+            suma.Valor1 = double.Parse(TxtValor1.Text);
+            suma.Valor2 = double.Parse(TxtValor2.Text);
             Calcular(suma);
+        }
 
+        private void BtnResta_Click(object sender, EventArgs e)
+        {
             Resta resta = new Resta();
-            resta.Valor1 = 10;
-            resta.Valor2 = 20;
+            resta.Valor1 = double.Parse(TxtValor1.Text);
+            resta.Valor2 = double.Parse(TxtValor2.Text);
             Calcular(resta);
 
         }
 
-        void Calcular(OperacionesBasicas operacionesBasicas)
+        private void BtnMultiplicacion_Click(object sender, EventArgs e)
         {
-         MessageBox.Show(operacionesBasicas.Calcular().ToString());
+            Multiplicacion multiplicacion = new Multiplicacion();
+            multiplicacion.Valor1 = double.Parse(TxtValor1.Text);
+            multiplicacion.Valor2 = double.Parse(TxtValor2.Text);
+            Calcular(multiplicacion);
+        }
+
+        private void BtnDivision_Click(object sender, EventArgs e)
+        {
+            Division division = new Division();
+            division.Valor1 = double.Parse(TxtValor1.Text);
+            division.Valor2 = double.Parse(TxtValor2.Text);
+            Calcular(division);
+
         }
     }
 }
