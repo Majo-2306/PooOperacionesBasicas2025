@@ -18,6 +18,8 @@ namespace PooOperacionesBasicas2025
             suma.Valor1 = double.Parse(TxtValor1.Text);
             suma.Valor2 = double.Parse(TxtValor2.Text);
             Calcular(suma);
+
+            suma.Hola();
         }
 
         private void BtnResta_Click(object sender, EventArgs e)
